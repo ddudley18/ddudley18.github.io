@@ -2,7 +2,7 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
     margin: 0;
-    background: url('assets/Background.jpg');
+    background-image: url('https://ddudley18.github.io/assets/Background.jpg');
     overflow-x: hidden;
 }
 
