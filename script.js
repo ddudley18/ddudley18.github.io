@@ -6,4 +6,13 @@ window.addEventListener('load', (event) => {
     }
 });
 
-
+const checkpoint = 600;
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > checkpoint) { 
+        let cards = document.querySelectorAll(".card");
+        for (let i = 0; i < cards.length; ++i) {
+            cards[i].classList.add('visible');
+        }
+    }
+  });

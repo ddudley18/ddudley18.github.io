@@ -11,11 +11,6 @@ body {
     margin-left: 30px;
 }
 
-#rightExp h3 {
-    margin-top: 2em;
-    font-size: 1.25em;
-}
-
 .mainNav {
     border-bottom: 2px solid black;
 }
@@ -25,6 +20,10 @@ body {
     text-decoration: black;
     display: flex;
     justify-content: space-around;
+}
+
+.nav-link {
+    opacity: 0;
 }
 
 .nav-link:hover {
@@ -40,21 +39,6 @@ body {
     text-decoration: none;
     margin-left: 15px;
 }
-
-.contact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact p {
-    font-size: 1.5em;
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 
 .intro {
     color: white;
@@ -88,11 +72,22 @@ body {
 .intro .bi-arrow-down {
     display: block;
     margin: 6em auto;
+    transition: all 1s;
+}
+
+.intro .bi-arrow-down:hover {
+    transform: scaleY(130%) scaleX(120%) translateY(20px);
+    transition: all 1s;
 }
 
 .panel {
     background: black;
     border: 5px solid white;
+}
+
+.exp {
+    height: 900px;
+    overflow-y:scroll;
 }
 
 .expWrapper {
@@ -128,7 +123,7 @@ body {
     align-items: center;
 }
 
-#leftExp {
+#expTitle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,7 +148,12 @@ body {
     justify-content: center;
 }
 
-#rightExp {
+#expBody h3 {
+    margin-top: 2em;
+    font-size: 1.25em;
+}
+
+#expBody {
     background: rgb(248, 248, 248);
 }
 
@@ -163,20 +163,16 @@ body {
     align-items: center;
 }
 
-#contactInfo {
-    background: rgb(248, 248, 248);
-    display: flex;
-    align-items: center;
-}
-
 .card {
     margin: 2em;
     box-shadow: 10px 5px 5px lightblue;
+    transition: 0.5s;
+    opacity: 0;
 }
 
-.exp {
-    height: 900px;
-    overflow-y:scroll;
+.card:hover {
+    transform: scale(110%);
+    transition: all 0.5s;
 }
 
 .frontEnd {
@@ -188,17 +184,39 @@ body {
     justify-content: end;
 }
 
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact p {
+    font-size: 1.5em;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#contactInfo {
+    background: rgb(248, 248, 248);
+    display: flex;
+    align-items: center;
+}
+
+/* Classes to be applied on load by script */
 .loadIntro {
     opacity: 1;
     margin-right: 0;
     transition: all 2s;
 }
 
-.nav-link {
-    opacity: 0;
-}
-
 .loadNav {
     opacity: 1;
     transition: opacity 4s;
+}
+
+.visible {
+    opacity: 1;
+    transition: all 2s;
 }
